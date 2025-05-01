@@ -1,0 +1,39 @@
+@import '/src/assets/styles/mixins.scss';
+
+.cover {
+	@include section-margin-top(28px, 3.5vw, 35px);
+	background: url('/src/assets/images/index/cover.png') no-repeat center bottom;
+	background-size: 60rem;
+
+	&__title {
+		@include font-size(32px, 5.6vw, 56px);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__title-accent {
+		color: #0560ab;
+		white-space: nowrap;
+	}
+
+	&__description {
+		margin-top: 1rem;
+
+		@include font-size(18px, 2.6vw, 26px);
+		font-weight: 400;
+	}
+
+	&__button {
+		margin-top: 1.5rem;
+	}
+
+	@media screen and (max-width: 640px) {
+		background: url('/src/assets/images/index/cover-m.png') no-repeat center bottom;
+	}
+
+	@media screen and (max-width: 280px) {
+    &__title-accent {
+      white-space: normal;
+    }
+	}
+}

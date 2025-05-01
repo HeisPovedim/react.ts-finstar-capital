@@ -1,13 +1,16 @@
 .header {
-	padding: 1rem 2rem;
+	padding: 1rem 0;
 	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+	.container {
+		position: relative;
+	}
 }
 
 .nav {
 	&__list {
 		display: flex;
-		gap: 2rem;
+		gap: 30px;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -15,13 +18,67 @@
 
 	&__link {
 		text-decoration: none;
-		color: #333;
-		font-weight: 500;
+		color: #828282;
+		font-weight: 400;
 		transition: color 0.3s ease;
 
 		&:hover {
 			color: #007bff;
 		}
+	}
+
+	&-mobile {
+		position: absolute;
+		margin: 0;
+		top: 85px;
+		left: 50%;
+		transform: translate(-50%, -10px);
+		width: 98%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: #fff;
+		padding: 15px 25px;
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+		border: 1px solid #0560ab;
+
+		opacity: 0;
+		pointer-events: none;
+		transition:
+			opacity 0.3s ease,
+			transform 0.3s ease;
+
+		&__list {
+			padding: 10px;
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px;
+		}
+
+		&__link {
+			font-size: 18px;
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: #0560ab;
+			}
+		}
+
+		&--open {
+			display: block;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		display: none;
 	}
 }
 
@@ -29,5 +86,91 @@
 	&__image {
 		height: 72px;
 		width: auto;
+	}
+
+	@media screen and (max-width: 768px) {
+		flex: 1;
+
+		&__image {
+			margin: 0 auto;
+			padding-right: 40px;
+
+			content: url('/public/logo-m.svg');
+			height: 30px;
+			min-height: 20px;
+			max-height: 30px;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		flex: none;
+
+		&__image {
+			padding-right: 0;
+		}
+	}
+}
+
+.burger {
+	cursor: pointer;
+	display: none;
+	position: relative;
+	border: none;
+	background: transparent;
+	width: 40px;
+	height: 26px;
+
+	&-checkbox {
+		position: absolute;
+		visibility: hidden;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 40px;
+		height: 4px;
+		border-radius: 10px;
+		background: #000000;
+		transition: all 0.3s ease;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	&__middle {
+		position: absolute;
+		left: 0;
+		top: 11px;
+		width: 32px;
+		height: 4px;
+		border-radius: 10px;
+		background: #000000;
+		transition: all 0.3s ease;
+	}
+
+	&-checkbox:checked + &::before {
+		top: 11px;
+		transform: rotate(45deg);
+	}
+
+	&-checkbox:checked + &::after {
+		bottom: 11px;
+		transform: rotate(-45deg);
+	}
+
+	&-checkbox:checked + & &__middle {
+		opacity: 0;
+	}
+
+	@media screen and (max-width: 768px) {
+		display: block;
 	}
 }

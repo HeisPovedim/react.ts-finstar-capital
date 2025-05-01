@@ -1,49 +1,80 @@
+// REACT-HOOKS
+import { useState } from 'react';
+
 // STYLES
-import styles from './Header.module.scss';
+import style from './Header.module.scss';
 
 export default function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 	return (
-		<header className={`${styles['header']}`}>
-			<div className='container flex justify-between items-center'>
-				<nav className={styles['nav']}>
-					<ul className={styles['nav__list']}>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
-								Главная
+		<header className={`${style['header']}`}>
+			<div className='container flex pl-[45px] items-center justify-center gap-[45px] max-md:pl-[16px] max-md:justify-between max-md:gap-2'>
+				<input
+					type='checkbox'
+					id='burger-checkbox'
+					className={style['burger-checkbox']}
+					checked={isMenuOpen}
+					onChange={() => setIsMenuOpen(!isMenuOpen)}
+				/>
+				<label className={style['burger']} htmlFor='burger-checkbox'>
+					<span className={style['burger__middle']}></span>
+				</label>
+				<nav className={style['nav']}>
+					<ul className={style['nav__list']}>
+						<li className={style['nav__item']}>
+							<a href='#' className={style['nav__link']}>
+								График СЧА
 							</a>
 						</li>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
-								О нас
-							</a>
-						</li>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
-								Услуги
+						<li className={style['nav__item']}>
+							<a href='#' className={style['nav__link']}>
+								Преимущества
 							</a>
 						</li>
 					</ul>
 				</nav>
-
-				<div className={styles['logo']}>
-					<img src='./logo.svg' alt='Логотип компании' className={styles['logo__image']} />
+				<div className={style['logo']}>
+					<img
+						src='./logo.svg'
+						alt='Логотип компании'
+						className={`${style['logo__image']} max-[320px]:pr-0`}
+					/>
 				</div>
-
-				<nav className={styles['nav']}>
-					<ul className={styles['nav__list']}>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
+				<nav className={style['nav']}>
+					<ul className={style['nav__list']}>
+						<li className={style['nav__item']}>
+							<a href='#' className={style['nav__link']}>
+								Формат инвестиций
+							</a>
+						</li>
+						<li className={style['nav__item']}>
+							<a href='#' className={style['nav__link']}>
 								Контакты
 							</a>
 						</li>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
-								Блог
+					</ul>
+				</nav>
+				<nav className={`${style['nav-mobile']} ${isMenuOpen ? style['nav-mobile--open'] : ''}`}>
+					<ul className={style['nav-mobile__list']}>
+						<li className={style['nav-mobile__item']}>
+							<a href='#' className={style['nav-mobile__link']}>
+								График СЧА
 							</a>
 						</li>
-						<li className={styles['nav__item']}>
-							<a href='#' className={styles['nav__link']}>
-								Войти
+						<li className={style['nav-mobile__item']}>
+							<a href='#' className={style['nav-mobile__link']}>
+								Преимущества
+							</a>
+						</li>
+						<li className={style['nav-mobile__item']}>
+							<a href='#' className={style['nav-mobile__link']}>
+								Формат инвестиций
+							</a>
+						</li>
+						<li className={style['nav-mobile__item']}>
+							<a href='#' className={style['nav-mobile__link']}>
+								Контакты
 							</a>
 						</li>
 					</ul>

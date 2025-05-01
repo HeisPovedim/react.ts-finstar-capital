@@ -9,7 +9,7 @@ export default {
 			container: {
 				center: true,
 				padding: {
-					DEFAULT: '12px',
+					DEFAULT: '16px',
 				},
 				screens: {
 					lg: '1200px',

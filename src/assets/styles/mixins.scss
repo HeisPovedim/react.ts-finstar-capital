@@ -1,0 +1,9 @@
+// FONTS
+@mixin font-size($min, $size, $max) {
+	font-size: clamp($min, $size, $max);
+}
+
+// SECTIONS
+@mixin section-margin-top($min, $size, $max) {
+	margin-top: clamp($min, $size, $max);
+}
