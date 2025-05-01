@@ -1,0 +1,13 @@
+body {
+	background:
+		url('/src/assets/images/index/ellipse-t.png') no-repeat top -18rem left -18rem,
+		url('/src/assets/images/index/ellipse-c.png') no-repeat top 20rem right -20rem;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background:
+			url('/src/assets/images/index/ellipse-t.png') no-repeat top -18rem right -18rem / 45rem,
+			url('/src/assets/images/index/ellipse-c.png') no-repeat top 25rem right -15rem / 30rem;
+	}
+}

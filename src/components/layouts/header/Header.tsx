@@ -9,7 +9,7 @@ export default function Header() {
 
 	return (
 		<header className={`${style['header']}`}>
-			<div className='container flex pl-[45px] items-center justify-center gap-[45px] max-md:pl-[16px] max-md:justify-between max-md:gap-2'>
+			<div className='container flex items-center justify-center gap-[45px] max-md:justify-between max-md:gap-2'>
 				<input
 					type='checkbox'
 					id='burger-checkbox'
@@ -20,7 +20,7 @@ export default function Header() {
 				<label className={style['burger']} htmlFor='burger-checkbox'>
 					<span className={style['burger__middle']}></span>
 				</label>
-				<nav className={style['nav']}>
+				<nav className={`${style['nav']} w-[260px] flex justify-end`}>
 					<ul className={style['nav__list']}>
 						<li className={style['nav__item']}>
 							<a href='#' className={style['nav__link']}>
@@ -41,7 +41,7 @@ export default function Header() {
 						className={`${style['logo__image']} max-[320px]:pr-0`}
 					/>
 				</div>
-				<nav className={style['nav']}>
+				<nav className={`${style['nav']} w-[260px]`}>
 					<ul className={style['nav__list']}>
 						<li className={style['nav__item']}>
 							<a href='#' className={style['nav__link']}>

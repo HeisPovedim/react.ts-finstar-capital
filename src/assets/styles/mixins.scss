@@ -1,9 +1,11 @@
 // FONTS
-@mixin font-size($min, $size, $max) {
-	font-size: clamp($min, $size, $max);
+@mixin font-size-vw($min, $max) {
+	$vw-size: calc($max / 10px);
+	font-size: clamp($min, #{$vw-size}vw, $max);
 }
 
 // SECTIONS
-@mixin section-margin-top($min, $size, $max) {
-	margin-top: clamp($min, $size, $max);
+@mixin section-margin-top-vw($min, $max) {
+	$vw-size: calc($max / 10px);
+	margin-top: clamp($min, #{$vw-size}vw, $max);
 }

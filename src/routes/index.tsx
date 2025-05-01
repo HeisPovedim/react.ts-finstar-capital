@@ -5,7 +5,10 @@ import Header from '@components/layouts/header/Header';
 
 // SCREENS
 import Cover from '@components/screens/index/cover/Cover';
+import Invest from '@components/screens/index/invest/Invest';
 
+// STYLES
+import style from './index.module.scss';
 
 export const Route = createFileRoute('/')({
 	component: Index,
@@ -13,11 +16,12 @@ export const Route = createFileRoute('/')({
 
 function Index() {
 	return (
-		<>
+		<div className={style['index']}>
 			<Header />
 			<main>
 				<Cover />
+				<Invest />
 			</main>
-		</>
+		</div>
 	);
 }

@@ -1,0 +1,62 @@
+@import '/src/assets/styles/mixins.scss';
+
+.invest {
+	@include section-margin-top-vw(60px, 80px);
+
+	&__tale {
+		&-title {
+			@include font-size-vw(22px, 36px);
+			font-weight: 500;
+		}
+
+		&-description {
+			margin-top: 1rem;
+
+			@include font-size-vw(16px, 20px);
+			font-weight: 400;
+		}
+
+		@media screen and (max-width: 768px) {
+      text-align: center;
+		}
+	}
+
+	&__assets {
+		&-title {
+			@include font-size-vw(36px, 58px);
+			font-weight: 500;
+			text-wrap: nowrap;
+
+			img {
+				width: auto;
+				height: 2.5rem;
+			}
+		}
+
+		&-description {
+			margin-top: 1rem;
+
+			@include font-size-vw(16px, 20px);
+			font-weight: 400;
+			text-align: right;
+		}
+
+		@media screen and (max-width: 768px) {
+      &-description {
+        text-align: center;
+			}
+		}
+	}
+
+	&__forecast {
+		min-height: 65px;
+		background-color: #e1efff99;
+		border-radius: 13px;
+		padding: 1.5rem;
+
+		@include font-size-vw(16px, 20px);
+		font-weight: 500;
+		text-align: center;
+		color: #0560ab;
+	}
+}
