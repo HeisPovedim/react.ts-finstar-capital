@@ -1,0 +1,91 @@
+@import '/src/assets/styles/mixins.scss';
+
+.advantages {
+	@include section-margin-top-vw(60px, 80px);
+
+	&-wrapper {
+		@include section-margin-top-vw(20px, 30px);
+	}
+
+	&__title {
+		@include font-size-vw(22px, 30px);
+		font-weight: 500;
+	}
+
+	&__risk {
+		@include padding-yx-vw(30px, 40px, 20px, 30px);
+		background:
+			url('/src/assets/images/advantages/risk-bg.png') no-repeat bottom -9rem right -4rem / 18rem,
+			#e4f2ff;
+		border-radius: 30px;
+
+		&__title {
+			@include font-size-vw(18px, 28px);
+			font-weight: 500;
+		}
+
+		&-item {
+			& > img {
+				height: 36px;
+				width: auto;
+			}
+
+			&__text {
+				@include font-size-vw(16px, 19px);
+				line-height: 100%;
+
+				& > span {
+					color: #105fd3;
+				}
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			background:
+				url('/src/assets/images/advantages/risk-bg.png') no-repeat bottom -9rem right -2rem / 15rem,
+				#e4f2ff;
+		}
+	}
+
+	&__estimation {
+		position: relative;
+
+		@include padding-yx-vw(30px, 40px, 20px, 30px);
+		background:
+			url('/src/assets/images/advantages/estimation-bg.png') no-repeat bottom -12rem right / 15rem,
+			#dcf8f2;
+		border-radius: 30px;
+
+		&::before {
+			content: url('/src/assets/images/advantages/estimation-money.png');
+			position: absolute;
+			top: -2rem;
+			right: 8rem;
+		}
+
+		&__title {
+			@include font-size-vw(18px, 28px);
+			font-weight: 500;
+			line-height: 100%;
+		}
+
+		&-item {
+			list-style: disc;
+
+			&::marker {
+				color: #0fd7ac;
+				font-size: 22px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			background:
+				url('/src/assets/images/advantages/estimation-bg.png') no-repeat bottom -10rem right / 8rem,
+				#dcf8f2;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}

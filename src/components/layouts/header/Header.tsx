@@ -1,11 +1,11 @@
-// REACT-HOOKS
-import { useState } from 'react';
+// HOOKS
+import { useHeader } from '../../../hooks/useHeader';
 
 // STYLES
 import style from './Header.module.scss';
 
 export default function Header() {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const { isMenuOpen, toggleMenu } = useHeader();
 
 	return (
 		<header className={`${style['header']}`}>
@@ -15,7 +15,7 @@ export default function Header() {
 					id='burger-checkbox'
 					className={style['burger-checkbox']}
 					checked={isMenuOpen}
-					onChange={() => setIsMenuOpen(!isMenuOpen)}
+					onChange={toggleMenu}
 				/>
 				<label className={style['burger']} htmlFor='burger-checkbox'>
 					<span className={style['burger__middle']}></span>
@@ -55,8 +55,10 @@ export default function Header() {
 						</li>
 					</ul>
 				</nav>
-				<nav className={`${style['nav-mobile']} ${isMenuOpen ? style['nav-mobile--open'] : ''}`}>
-					<ul className={style['nav-mobile__list']}>
+				<nav
+					className={`${style['nav-mobile']} ${isMenuOpen ? style['nav-mobile--open'] : ''} flex flex-col justify-between`}
+				>
+					<ul className={`${style['nav-mobile__list']} mt-[5rem] flex flex-col gap-8 text-center`}>
 						<li className={style['nav-mobile__item']}>
 							<a href='#' className={style['nav-mobile__link']}>
 								График СЧА
@@ -78,6 +80,14 @@ export default function Header() {
 							</a>
 						</li>
 					</ul>
+					<div className={`${style['nav-mobile__contacts']} flex flex-col gap-2 text-center`}>
+						<a href='tel:+74957455557' className={style['nav-mobile__link']}>
+							+7 (495) 745-55-57
+						</a>
+						<a href='mailto:info@finstar-capital.ru' className={style['nav-mobile__link']}>
+							info@finstar-capital.ru
+						</a>
+					</div>
 				</nav>
 			</div>
 		</header>

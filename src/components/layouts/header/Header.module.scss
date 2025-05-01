@@ -1,5 +1,7 @@
 .header {
 	padding: 1rem 0;
+	position: relative;
+	z-index: 1001;
 
 	.container {
 		position: relative;
@@ -27,35 +29,25 @@
 	}
 
 	&-mobile {
-		position: absolute;
+		position: fixed;
 		margin: 0;
-		top: 85px;
-		left: 50%;
-		transform: translate(-50%, -10px);
-		width: 98%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100vh;
+		padding: 100px 25px 25px;
+		transition: left 0.3s ease;
+		z-index: 1000;
+		overflow-y: auto;
 
-		background-color: #fff;
-		padding: 15px 25px;
-		border-radius: 12px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-		border: 1px solid #0560ab;
-
-		opacity: 0;
-		pointer-events: none;
-		transition:
-			opacity 0.3s ease,
-			transform 0.3s ease;
+		background:
+			url('/src/assets/images/index/ellipse-t.png') no-repeat top -18rem left -18rem / 45rem,
+			url('/src/assets/images/index/ellipse-c.png') no-repeat top 25rem right -15rem / 30rem,
+			#fff;
 
 		&__list {
-			padding: 10px;
-
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 30px;
+			padding: 0;
+			width: 100%;
 		}
 
 		&__link {
@@ -70,9 +62,11 @@
 		}
 
 		&--open {
-			display: block;
-			opacity: 1;
-			pointer-events: auto;
+			left: 0;
+
+			& + :global(body) {
+				overflow: hidden;
+			}
 		}
 	}
 
@@ -82,6 +76,9 @@
 }
 
 .logo {
+	position: relative;
+	z-index: 1002;
+
 	&__image {
 		height: 72px;
 		width: auto;
@@ -118,6 +115,7 @@
 	background: transparent;
 	width: 40px;
 	height: 26px;
+	z-index: 1002;
 
 	&-checkbox {
 		position: absolute;
@@ -129,7 +127,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		width: 40px;
+		width: 28px;
 		height: 4px;
 		border-radius: 10px;
 		background: #000000;
@@ -148,7 +146,7 @@
 		position: absolute;
 		left: 0;
 		top: 11px;
-		width: 32px;
+		width: 24px;
 		height: 4px;
 		border-radius: 10px;
 		background: #000000;
