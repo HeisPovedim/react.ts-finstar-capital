@@ -1,4 +1,4 @@
-@import '/src/assets/styles/mixins.scss';
+@use '/src/assets/styles/mixins.scss' as *;
 
 .cover {
 	@include section-margin-top-vw(28px, 35px);

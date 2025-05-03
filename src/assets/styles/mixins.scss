@@ -17,3 +17,7 @@
 	padding: clamp($min-y, #{$vw-size-y}vw, $max-y) clamp($min-x, #{$vw-size-x}vw, $max-x);
 }
 
+@mixin padding-vw($min, $max) {
+	$vw-size: calc($max / 10px);
+	padding: clamp($min, #{$vw-size}vw, $max);
+}

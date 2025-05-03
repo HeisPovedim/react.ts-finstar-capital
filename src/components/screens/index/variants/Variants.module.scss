@@ -1,0 +1,102 @@
+@use '/src/assets/styles/mixins.scss' as *;
+
+.variants {
+	@include section-margin-top-vw(60px, 80px);
+
+	&__title {
+		@include font-size-vw(22px, 30px);
+		font-weight: 500;
+	}
+
+	&__table {
+		border-collapse: separate;
+		border-spacing: 4px;
+		position: relative;
+
+		caption {
+			caption-side: bottom;
+			padding: 1.5rem;
+
+			text-align: left;
+			font-weight: 500;
+
+			background-color: #f6f6f6;
+			border-radius: 10px;
+		}
+
+		thead {
+			background-color: #e4f2ff;
+
+			th {
+				padding: 50px 10px 10px 10px;
+
+				font-weight: 500;
+				text-align: left;
+
+				border-radius: 20px 20px 0 0;
+			}
+
+			th:nth-child(2) {
+				background: url('/src/assets/images/icons/tb-graph.png') no-repeat top 1rem left 1rem;
+			}
+
+			th:nth-child(3) {
+				background: url('/src/assets/images/icons/tb-doc.png') no-repeat top 1rem left 1rem;
+				width: 20%;
+			}
+
+			th:nth-child(4) {
+				background: url('/src/assets/images/icons/tb-invest.png') no-repeat top 1rem left 1rem;
+				width: 25%;
+			}
+
+			th:nth-child(5) {
+				background: url('/src/assets/images/icons/tb-garant.png') no-repeat top 1rem left 1rem;
+				width: 15%;
+			}
+		}
+
+		tbody {
+			tr {
+				td {
+					font-size: 14px;
+					padding: 10px;
+					background-color: #f6f6f6;
+
+					p {
+						img {
+							display: inline-block;
+						}
+					}
+
+					p {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+					}
+				}
+
+				td:first-child {
+					font-size: 16px;
+					font-weight: 500;
+					background-color: #e4f2ff;
+				}
+			}
+
+			tr:last-child {
+				td {
+					border-radius: 0 0 20px 20px;
+				}
+			}
+		}
+	}
+
+	&__download {
+    font-size: 20px;
+    font-weight: 500;
+
+		background-color: #e4f2ff;
+		padding: 1.5rem;
+		border-radius: 15px;
+	}
+}

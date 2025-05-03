@@ -7,6 +7,8 @@ import Header from '@components/layouts/header/Header';
 import Cover from '@components/screens/index/cover/Cover';
 import Invest from '@components/screens/index/invest/Invest';
 import Advantages from '@components/screens/index/advantages/Advantages';
+import Format from '@components/screens/index/format/Format';
+import Variants from '@components/screens/index/variants/Variants';
 // STYLES
 import style from './index.module.scss';
 
@@ -22,6 +24,8 @@ function Index() {
 				<Cover />
 				<Invest />
 				<Advantages />
+				<Format />
+				<Variants />
 			</main>
 		</div>
 	);
