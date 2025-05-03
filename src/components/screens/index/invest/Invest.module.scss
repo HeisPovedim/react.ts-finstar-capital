@@ -3,7 +3,15 @@
 .invest {
 	@include section-margin-top-vw(60px, 80px);
 
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
 	&__tale {
+		width: 450px;
+
 		&-title {
 			@include font-size-vw(22px, 36px);
 			font-weight: 500;
@@ -11,22 +19,19 @@
 
 		&-description {
 			margin-top: 1rem;
-
 			@include font-size-vw(16px, 20px);
 			font-weight: 400;
-		}
-
-		@media screen and (max-width: 768px) {
-      text-align: center;
 		}
 	}
 
 	&__assets {
 		&-title {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
 			@include font-size-vw(36px, 58px);
 			font-weight: 500;
 			text-wrap: nowrap;
-
 			img {
 				width: auto;
 				height: 2.5rem;
@@ -35,28 +40,44 @@
 
 		&-description {
 			margin-top: 1rem;
-
 			@include font-size-vw(16px, 20px);
 			font-weight: 400;
 			text-align: right;
 		}
-
-		@media screen and (max-width: 768px) {
-      &-description {
-        text-align: center;
-			}
-		}
 	}
 
 	&__forecast {
+		margin-top: 2rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		min-height: 65px;
 		background-color: #e1efff99;
 		border-radius: 13px;
 		padding: 1.5rem;
-
 		@include font-size-vw(16px, 20px);
 		font-weight: 500;
 		text-align: center;
 		color: #0560ab;
+	}
+
+	@media screen and (max-width: 768px) {
+		&__wrap {
+			flex-direction: column;
+		}
+		&__tale {
+			text-align: center;
+			width: 100%;
+		}
+		&__assets {
+			width: 100%;
+			&-title {
+				justify-content: center;
+			}
+			&-description {
+				text-align: center;
+			}
+		}
 	}
 }

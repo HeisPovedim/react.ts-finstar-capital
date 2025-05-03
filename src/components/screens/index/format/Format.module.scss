@@ -12,7 +12,7 @@
 
 		th,
 		td {
-			@include padding-vw(5px, 15px);
+			@include padding-vw(5px, 25px);
 			@include font-size-vw(16px, 28px);
 			text-align: center;
 		}

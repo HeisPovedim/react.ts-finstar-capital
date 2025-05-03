@@ -6,7 +6,7 @@ export default function Variants() {
 		<section className={style['variants']}>
 			<div className='container'>
 				<h2 className={style['variants__title']}>Варианты инвестирования в Залоговые Займы Финстар</h2>
-				<table className={`${style['variants__table']} w-full mt-7 max-[890px]:hidden`}>
+				<table className={style['variants__table']}>
 					<thead>
 						<tr>
 							<th></th>
@@ -135,9 +135,7 @@ export default function Variants() {
 					</tbody>
 					<caption className='mt-8 w-max'>*ISIN-код на бирже: RU000A108RS3</caption>
 				</table>
-				<div
-					className={`${style['variants__download']} mt-6 items-center justify-center gap-6 hidden max-[890px]:flex`}
-				>
+				<div className={style['variants__download']}>
 					<img src='/src/assets/images/icons/tb-pdf.svg' alt='PDF' />
 					<p>Скачать таблицу</p>
 				</div>

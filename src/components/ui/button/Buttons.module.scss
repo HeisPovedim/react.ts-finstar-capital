@@ -26,7 +26,28 @@
 }
 
 .button--blue {
+	min-height: 58px;
+	width: min(100%, 160px);
+
 	font-size: 20px;
+	font-weight: 700;
 	color: #fff;
-	background-color: #0000FF;
+	word-wrap: break-word;
+
+	background-color: #0560AB;
+	border-radius: 10px;
+	padding: 10px;
+
+	&:hover {
+		background-color: #1080DC;
+	}
+
+	&:active {
+		background-color: #1080DC;
+	}
+
+	&:disabled {
+		background-color: #1080DC;
+		opacity: 0.5;
+	}
 }

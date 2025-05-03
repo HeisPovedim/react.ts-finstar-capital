@@ -9,6 +9,8 @@ import Invest from '@components/screens/index/invest/Invest';
 import Advantages from '@components/screens/index/advantages/Advantages';
 import Format from '@components/screens/index/format/Format';
 import Variants from '@components/screens/index/variants/Variants';
+import Learn from '@/components/screens/index/qr-code/QrCode';
+
 // STYLES
 import style from './index.module.scss';
 
@@ -26,6 +28,7 @@ function Index() {
 				<Advantages />
 				<Format />
 				<Variants />
+				<Learn />
 			</main>
 		</div>
 	);

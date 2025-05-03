@@ -1,8 +1,8 @@
-// STYLES
-import style from './Cover.module.scss';
-
 // COMPONENTS
 import Button from '@components/ui/button/Button';
+
+// STYLES
+import style from './Cover.module.scss';
 
 export default function Cover() {
 	return (

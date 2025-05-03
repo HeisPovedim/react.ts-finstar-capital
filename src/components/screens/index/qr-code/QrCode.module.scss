@@ -1,0 +1,64 @@
+@use '/src/assets/styles/mixins.scss' as *;
+
+.qr {
+	@include section-margin-top-vw(60px, 80px);
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2.5rem;
+	}
+
+	&__title {
+		@include font-size-vw(22px, 40px);
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&__description {
+		@include section-margin-top-vw(15px, 30px);
+	}
+
+	&__img {
+		flex: 1 1 80%;
+	}
+
+	&__content {
+		flex: 1 1 50%;
+	}
+
+	&__buttons {
+		@include section-margin-top-vw(25px, 40px);
+	}
+
+	@media screen and (max-width: 768px) {
+		.container {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+
+		&__img {
+			width: 100%;
+
+			&-picture {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+
+		&__buttons {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		&__button:first-child {
+			display: block !important;
+		}
+	}
+}

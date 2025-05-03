@@ -12,3 +12,17 @@
 * {
 	font-family: 'Inter', sans-serif;
 }
+
+.container {
+	width: min(100%, 1200px);
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.hidden {
+	display: none;
+}
+
+.block {
+	display: block;
+}
