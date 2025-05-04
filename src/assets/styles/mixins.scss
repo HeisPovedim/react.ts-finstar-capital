@@ -10,6 +10,11 @@
 	margin-top: clamp($min, #{$vw-size}vw, $max);
 }
 
+@mixin section-margin-bottom-vw($min, $max) {
+	$vw-size: calc($max / 10px);
+	margin-bottom: clamp($min, #{$vw-size}vw, $max);
+}
+
 // PADDINGS
 @mixin padding-yx-vw($min-y, $max-y, $min-x, $max-x) {
 	$vw-size-y: calc($max-y / 10px);

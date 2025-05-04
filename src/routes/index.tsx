@@ -4,13 +4,14 @@ import { createFileRoute } from '@tanstack/react-router';
 import Header from '@components/layouts/header/Header';
 
 // SCREENS
-import Cover from '@components/screens/index/cover/Cover';
-import Invest from '@components/screens/index/invest/Invest';
-import Advantages from '@components/screens/index/advantages/Advantages';
-import Format from '@components/screens/index/format/Format';
-import Variants from '@components/screens/index/variants/Variants';
-import Learn from '@/components/screens/index/qr-code/QrCode';
 import Faq from '@/components/screens/index/faq/Faq';
+import Learn from '@/components/screens/index/qr-code/QrCode';
+import Footer from '@components/layouts/footer/Footer';
+import Advantages from '@components/screens/index/advantages/Advantages';
+import Cover from '@components/screens/index/cover/Cover';
+import Format from '@components/screens/index/format/Format';
+import Invest from '@components/screens/index/invest/Invest';
+import Variants from '@components/screens/index/variants/Variants';
 
 // STYLES
 import style from './index.module.scss';
@@ -32,6 +33,7 @@ function Index() {
 				<Learn />
 				<Faq />
 			</main>
+			<Footer />
 		</div>
 	);
 }
