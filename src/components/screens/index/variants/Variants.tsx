@@ -133,7 +133,7 @@ export default function Variants() {
 							<td>Потенциально более высокая доходность, чем по диверсифицированному портфелю</td>
 						</tr>
 					</tbody>
-					<caption className='mt-8 w-max'>*ISIN-код на бирже: RU000A108RS3</caption>
+					<caption>*ISIN-код на бирже: RU000A108RS3</caption>
 				</table>
 				<div className={style['variants__download']}>
 					<img src='/src/assets/images/icons/tb-pdf.svg' alt='PDF' />

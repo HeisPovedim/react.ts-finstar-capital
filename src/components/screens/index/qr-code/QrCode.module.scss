@@ -57,8 +57,18 @@
 			gap: 1rem;
 		}
 
+		&__button {
+			width: 100%;
+		}
+
 		&__button:first-child {
-			display: block !important;
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 380px) {
+		&__buttons {
+			flex-direction: column;
 		}
 	}
 }

@@ -7,7 +7,7 @@ import style from './Cover.module.scss';
 export default function Cover() {
 	return (
 		<section className={style['cover']}>
-			<div className='container h-[560px] flex flex-col items-center justify-start text-center'>
+			<div className={`${style['cover__container']} container`}>
 				<h2 className={style['cover__title']}>
 					Получите от <span className={style['cover__title-accent']}>30% годовых</span>
 				</h2>

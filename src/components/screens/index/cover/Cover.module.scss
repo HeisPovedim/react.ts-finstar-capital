@@ -4,6 +4,17 @@
 	@include section-margin-top-vw(28px, 35px);
 	background: url('/src/assets/images/cover/cover.png') no-repeat center bottom / 60rem;
 
+	&__container {
+		height: 560px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: start;
+
+		text-align: center;
+	}
+
 	&__title {
 		@include font-size-vw(32px, 56px);
 		font-weight: 700;

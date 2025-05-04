@@ -10,6 +10,7 @@ import Advantages from '@components/screens/index/advantages/Advantages';
 import Format from '@components/screens/index/format/Format';
 import Variants from '@components/screens/index/variants/Variants';
 import Learn from '@/components/screens/index/qr-code/QrCode';
+import Faq from '@/components/screens/index/faq/Faq';
 
 // STYLES
 import style from './index.module.scss';
@@ -29,6 +30,7 @@ function Index() {
 				<Format />
 				<Variants />
 				<Learn />
+				<Faq />
 			</main>
 		</div>
 	);
